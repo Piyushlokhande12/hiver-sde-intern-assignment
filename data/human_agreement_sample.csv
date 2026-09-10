@@ -1,0 +1,21 @@
+tweet_id,customer_text,annotator1_intent,annotator2_intent,agreement
+91442,"@AmazonHelp Hi! The tracking information attached! https://t.co/cLGsDEYzGT",order_delivery,order_delivery,True
+93533,"@AmazonHelp Done.",INVALID,INVALID,True
+50767,"@115821 @120533 @AmazonHelp @127390 #TurtlesAllTheWayDown Et je ne pense pas être la seule...? Has this happened to someone else? https://t.co/cnkB2p99RQ",other,other,True
+95309,"@AmazonHelp Par amazon. Y a-t-il une possibilite pour que vous m'expediez la recharge 2018 s'il vous plait?",product_issue,order_delivery,False
+122772,"@AmazonHelp Y así fue, no me ha llegado el paquete en todo el día. Pagar Prime para esto..",order_delivery,order_delivery,True
+98581,"@AmazonHelp A person call me for pick up product for return, he reached home but due to non availability of box he told with to check with company...but he neither revert not come back.... Wat is happening?",refund_return,refund_return,True
+74699,"@AmazonHelp Bah y'a pas l'option "" vous m'avez envoyer une commande que je vous ai demandé d'annuler "" 🤬",cancellation,cancellation,True
+108157,"@AmazonHelp Minha conta é no Banco do Brasil, cartão Elo ...",payment_issue,payment_issue,True
+200001,"@AmazonHelp I was charged twice for my Prime membership this month. Please check and refund the extra $14.99",payment_issue,payment_issue,True
+200011,"@AmazonHelp I sent back the returned jacket 10 days ago. Tracking says delivered to warehouse but no refund yet!",refund_return,refund_return,True
+200021,"@AmazonHelp I cannot log in to my Amazon account. It says password incorrect and the reset email never arrives!",account_issue,account_issue,True
+200024,"@AmazonHelp How do I cancel my Amazon Prime annual subscription and get a prorated refund?",account_issue,cancellation,False
+200031,"@AmazonHelp My Echo Dot keeps dropping Wi-Fi connection every 10 minutes. How do I fix this?",product_issue,product_issue,True
+200041,"@AmazonHelp I need to cancel order #203-991823 immediately. I accidentally ordered the wrong color!",cancellation,cancellation,True
+200051,"@AmazonHelp tracking says 'Delivered to mailbox' at 2 PM but my mailbox is completely empty! No package.",order_delivery,order_delivery,True
+200063,"@AmazonHelp Is Amazon Smile still active for charitable donations on purchases?",other,other,True
+200071,"@AmazonHelp I bought a Kindle book by mistake. Can I return an accidental digital Kindle ebook order?",refund_return,cancellation,False
+200079,"@AmazonHelp Someone is trying to hack my account from an unfamiliar IP address in another country!",account_issue,account_issue,True
+200086,"@AmazonHelp The blender stopped spinning after 2 days of normal use. Smells like burnt rubber.",product_issue,product_issue,True
+200105,"@AmazonHelp Package was delivered to the wrong house number (delivered to #42 instead of #24).",order_delivery,order_delivery,True

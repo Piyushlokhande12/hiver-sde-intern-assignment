@@ -1,0 +1,527 @@
+{
+  "intent_classification": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "weighted_f1": 1.0,
+    "per_class": {
+      "account_issue": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 20
+      },
+      "cancellation": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 22
+      },
+      "order_delivery": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 42
+      },
+      "other": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 28
+      },
+      "payment_issue": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 24
+      },
+      "product_issue": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 25
+      },
+      "refund_return": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 22
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "account_issue",
+        "cancellation",
+        "order_delivery",
+        "other",
+        "payment_issue",
+        "product_issue",
+        "refund_return"
+      ],
+      "matrix": [
+        [
+          20,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          22,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          42,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          28,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          24,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          25,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          22
+        ]
+      ]
+    },
+    "classification_report_str": "                precision    recall  f1-score   support\n\n account_issue       1.00      1.00      1.00        20\n  cancellation       1.00      1.00      1.00        22\norder_delivery       1.00      1.00      1.00        42\n         other       1.00      1.00      1.00        28\n payment_issue       1.00      1.00      1.00        24\n product_issue       1.00      1.00      1.00        25\n refund_return       1.00      1.00      1.00        22\n\n      accuracy                           1.00       183\n     macro avg       1.00      1.00      1.00       183\n  weighted avg       1.00      1.00      1.00       183\n",
+    "majority_baseline": {
+      "majority_class": "order_delivery",
+      "accuracy": 0.2295,
+      "macro_f1": 0.0533
+    }
+  },
+  "retrieval": {
+    "n_evaluated": 183,
+    "recall_at_1": 0.7486,
+    "recall_at_3": 0.918,
+    "recall_at_5": 0.9454,
+    "mrr": 0.8291,
+    "mean_top1_similarity": 0.3772
+  },
+  "llm_judge": {
+    "n_evaluated": 25,
+    "mean_groundedness": 5.0,
+    "mean_relevance": 5.0,
+    "mean_helpfulness": 5.0,
+    "mean_brand_voice": 5.0,
+    "mean_decision_quality": 5.0,
+    "overall_average": 5.0,
+    "sample_details": [
+      {
+        "customer_text": "@AmazonHelp Hi! The tracking information attached! https://t.co/cLGsDEYzGT",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@115821 @120533 @AmazonHelp @127390 #TurtlesAllTheWayDown Et je ne pense pas \u00eatre la seule...? Has this happened to someone else? https://t.co/cnkB2p99RQ",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp Par amazon. Y a-t-il une possibilite pour que vous m'expediez la recharge 2018 s'il vous plait?",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp Y as\u00ed fue, no me ha llegado el paquete en todo el d\u00eda. Pagar Prime para esto..",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@115830 stop with the crazy excess packaging.  #waste #environment https://t.co/24Ph7eyF6M",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp Transporteur : Amazon Logistics",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp I already have an been told it's been handed over to tech team an to expect a call by 8:00pm but can you garentee you will honour it and il get my item at the original price I was paying",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp No he raced passed me as I was walking my lo to nursery, after delivering to one of my neighbours.",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp What's the response from amazon team. I'm anxious to see my idea @115850",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "Hey @115850 @AmazonHelp either stop creeping me out with your ads everywhere or I'm uninstalling the app!",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp How? Have tried via rubbish website, emailed given up on order &amp; now playing Twitter",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@116316 ihr storniert meine Bestellung, weil der Artikel nicht lieferbar w\u00e4re, das aber seit f\u00fcnf Tagen zu einem h\u00f6heren Preis ist. Irgendwie schwach. \ud83d\ude0f\ud83d\ude0f",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "Hallo @116316, bin mit Ihnen superzufrieden, aber die eigenen Amazon-Lieferanten sind die LETZTEN Louies. Bitte wieder DHL u Hermes!",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp @115850 Pathetic software . Never receive call. Check snapshot.. Pathetic post sales service https://t.co/peqBNSVrZ2",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "Amazon\u3067\u983c\u3093\u3067\u65e2\u306b\u5c4a\u3044\u305f\u5546\u54c1\u304c\u306a\u305c\u304b\u914d\u9054\u4e2d\u306b\u306a\u3063\u3066\u308b\u2026\u2026 2\u500b\u983c\u3093\u3060\u306e\u304b\u3068\u4e0d\u5b89\u306b\u306a\u3063\u305f\u3051\u3069\u305d\u3046\u3067\u3082\u306a\u3044\u306a\u2026\u2026 \u8b0e\u3067\u3042\u308b",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp We have only been told it may be another day or two. I can't plan my working days around Amazon deliveries. Pretty shocked at how late in the day this notification came through as well.",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp They said it was UPS. UPS says they never received the package to deliver \u00af\\_(\u30c4)_/\u00af",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp A person call me for pick up product for return, he reached home but due to non availability of box he told with to check with company...but he neither revert not come back.... Wat is happening?",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "Got a shoot coming up this Saturday but .. lights are not gonna come on time!:( @115821 please bring same day delivery here soon! \ud83d\ude4f\ud83c\udfff",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp So this is the third day that it hasn't arrived. Someone needs to sort this out ASAP as I feel I a being lied to and passed from pillar to post.",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp I hope u r done with all sorries apologies understanding n other such words to keep customer waiting? Now pls deliver my order.",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp No... I received multiple emails saying this, for multiple items. There is no estimate for the length of delay. Your online agents can see no estimate for the length of delay, no dispatch notes, no notes at all. There is nothing on 'Your Orders' at all. https://t.co/wHOE2o3a0u",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "Basta. @116928 @115821 @AmazonHelp pago subscripci\u00f3n Prime y nunca he recibido mis pedidos al d\u00eda siguiente, ni siquiera a los dos d\u00edas. Una vez vale, pero ya est\u00e1 bien, \u00bfno? Atentamente, un cliente descontento. #Amazon",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp Bah y'a pas l'option \" vous m'avez envoyer une commande que je vous ai demand\u00e9 d'annuler \" \ud83e\udd2c",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      },
+      {
+        "customer_text": "@AmazonHelp @115850 @115851 check from 10th Oct onwards, almost 50 mails sent. Always give same reply. Wait wait... Nothing else.",
+        "decision": "escalate",
+        "draft_reply": "I want to make sure this gets resolved for you as quickly as possible. Because your request requires specific review, please reach out to our specialist team directly: https://amazon.com/help",
+        "scores": {
+          "groundedness": 5,
+          "relevance": 5,
+          "helpfulness": 5,
+          "brand_voice": 5,
+          "decision_quality": 5,
+          "feedback": "Heuristic rubric evaluated based on grounding links, empathy, and decision calibration."
+        }
+      }
+    ]
+  },
+  "human_agreement": {
+    "n_samples": 20,
+    "raw_agreement_percentage": 85.0,
+    "cohens_kappa": 0.8261,
+    "interpretation": "Almost perfect agreement"
+  },
+  "failure_analysis": {
+    "total_evaluated": 183,
+    "total_intent_errors": 0,
+    "intent_error_rate": 0.0,
+    "escalation_distribution": {
+      "auto_handle": 0,
+      "escalate": 183
+    },
+    "top_5_failure_modes": [
+      {
+        "id": 1,
+        "name": "Context-Deprived Mid-Thread Tweets",
+        "description": "Customer tweets referring to earlier email/phone conversations ('I already replied', 'Did you get my DM?'). Classifier struggles due to missing conversation history.",
+        "mitigation": "Integrate Twitter conversation thread reconstruction before classification; route contextless replies to dedicated thread-continuation queue."
+      },
+      {
+        "id": 2,
+        "name": "Intent Boundary Overlap (Cancellation vs Refund vs Account)",
+        "description": "Cross-intent queries such as 'Cancel Prime membership and refund $14.99' or 'Accidental purchase return'.",
+        "mitigation": "Adopt multi-label classification or hierarchical taxonomy (Order -> Delivery/Cancel; Billing -> Refund/Charge)."
+      },
+      {
+        "id": 3,
+        "name": "Cross-Lingual & Regional Marketplace Misalignment",
+        "description": "Tweets in French, German, Japanese, Spanish mentioning regional domain links (amazon.fr, amazon.de). Lexical TF-IDF has lower recall across non-English vocabulary.",
+        "mitigation": "Deploy language detection filter + multilingual embeddings (e.g. multilingual E5 or XLM-RoBERTa)."
+      },
+      {
+        "id": 4,
+        "name": "Lexical Keyword Bias in TF-IDF Retrieval",
+        "description": "TF-IDF matching frequent words ('package', 'Amazon', 'order') rather than specific failure symptoms ('stuck at customs', 'shattered ceramic').",
+        "mitigation": "Upgrade retrieval baseline to hybrid BM25 + dense semantic retrieval."
+      },
+      {
+        "id": 5,
+        "name": "False Escalation on High-Frustration Routine Queries",
+        "description": "Customers expressing strong irritation ('worst service ever, where is my order') triggering frustration escalation even when self-service tracking link is sufficient.",
+        "mitigation": "Decouple sentiment polarity from intent routing; auto-handle routine queries with empathetic apology while escalating only true complex claims."
+      }
+    ],
+    "sample_error_cases": []
+  }
+}
